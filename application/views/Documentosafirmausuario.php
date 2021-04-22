@@ -70,6 +70,7 @@
     font-size:20px;
     text-align:center;
     height:25px;
+    color: white;
 }
 .concluido{
     background: #75D60D;
@@ -99,28 +100,21 @@
                                       <table class="table">
                                           <thead>
                                               <tr>
-                                                  <td class="t">FECHA</td>
-                                                  <td class="t">FOLIO</td>
-                                                  <td class="t">NOMBRE DOCENTE</td>
-                                                  <td class="t">DOCUMENTO</td>
-                                                  <td class="t">ESTADO</td>
+                                                  <td class="t">ID</td>
+                                                  <td class="t">TITULO</td>
+                                                  <td class="t">DESCRIPCION</td>
+                                                  <td class="t">URL</td>
                                               </tr>
                                           </thead>
                                           <tbody>
+                                              <?php foreach($files->result() as $files){?>
                                               <tr class="folio">
-                                                  <td><input type="date" class="aceptable"></td>
-                                                  <td >125522</td>
-                                                  <td>Analila Montiel Salazar</td>
-                                                  <td><a href="">Carta_AceptacionESS</a></td>
-                                                  <td type="status" class="revicion">REVICION</td>
+                                                  <td><?= $files->id ?></td>
+                                                  <td ><?= $files->title ?></td>
+                                                  <td><?= $files->descripcion ?></td>
+                                                  <td><a href="<?=$files->url?>"><?=$files->url?></a></td>
                                               </tr>
-                                              <tr class="folio">
-                                                  <td><input type="date" class="aceptable"></td>
-                                                  <td >HTLS1523</td>
-                                                  <td>Julio Ojeda Rosales</td>
-                                                  <td><a href="">Carta_presentacion</a></td>
-                                                  <td type="status" class="concluido">CONCLUIDO</td>
-                                              </tr>
+                                             <?php }?> 
                                           </tbody>
                                       </table>
                                   </div>

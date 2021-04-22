@@ -6,8 +6,20 @@ class Busqueda extends CI_Controller {
 	/**
 	 * Autores: Equipo 5
 	 */
+	public function __construct(){
+        parent::__construct();
+        $this->load->model('Mbusqueda');
+		$this->load->helper('form');
+	}
+
 	public function index()
 	{
-		$this->load->view('busqueda');
+		$data['idperiodos'] = $this->Mbusqueda->obtener_periodo();
+        $data['datos'] = $this->Mbusqueda->obtener_datos();
+		$data['IdDocumento'] = $this->Mbusqueda->obtener_documentos();
+        $data['IdAlumno'] = $this->Mbusqueda->obtener_alumno();
+		
+		$this->load->view('busqueda', $data);
 	}
+	
 }

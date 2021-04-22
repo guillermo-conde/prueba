@@ -17,17 +17,21 @@
                               <div class="container">
                                   <div class="block-heading" style="height: 100px;">
                                       <br><br>
-                                      <h4 style="background-color: #660708;color: #ffffff;font-size: 30px;height: 50px;">BÚSQUEDA</h4>
+                                      <h4 style="background-color: #660708;color: #ffffff;font-size: 30px;height: 50px;">BÚSQUEDA <i class="fa fa-search"></i> </h4>
                                   </div>
                               </div>
                           </section>
                           <section class="text-justify clean-block features">
                               <div class="container">
+                              <br>
                               <h4 style="color: #595959;font-size: 20px">BÚSQUEDA POR NOMBRE</h4>
                               </div>
                            </section>
     <div class="col-12 col-lg-6 col-xl">
     <!-- Main content -->
+    <section class="principal">
+</section>
+
     <section class="text-justify clean-block features">
         <div class="container-fluid">
             <form action="enhanced-results.html">
@@ -68,37 +72,68 @@
                     <h4 style="color: #595959;font-size: 20px"> </h4>
                 </div>    
                <div class="card">
-                  <div class="table-responsive mb-0">
-                      <table class="table table-sm table-nowrap card-table">
+                  <div class="table-responsive" style="margin: 20px;padding: 0px;">
+                  <table id="datatable" class=" table-nowrap card-table">
                           <thead>
-                          <tr>
-                              <th>
-                                  NOMBRE DEL DOCUMENTO
-                              </th>
-                              <th>
-                                  FECHA DE CARGA
-                              </th>
-                              <th>
-                                  MOTIVO
-                              </th>
-                              <th>
-                                  ARCHIVO
-                              </th>
+                          <th style="background-color: #660708;color: #ffffff;">
+                          <h4 class="text-left" style="color: rgb(255,255,255); font-size: 22px; width: 300px;">NOMBRE DEL DOCUMENTO&nbsp;&nbsp;<i class="fa fa-file-alt"></i></h4>
+                        </th>
+                        <th style="background-color: #660708;color: #ffffff;">
+                        <h4 style="color: rgb(255,255,255); font-size: 22px; width: 200px;">FECHA DE CARGA&nbsp;&nbsp;<i class="fa fa-calendar"></i></h4>
+                        </th>
+                        <th style="background-color: #660708;color: #ffffff;">
+                        <h4 style="color: rgb(255,255,255); font-size: 22px; width: 200px;">MOTIVO&nbsp;&nbsp;<i class="fa fa-sticky-note"></i></h4>
+                        </th>
+                        <th style="background-color: #660708;color: #ffffff;">
+                        <h4 style="color: rgb(255,255,255); font-size: 22px; width: 190px;">ESTADO&nbsp;&nbsp;<i class="fa fa-info-circle"></i></h4>
+                        </th>
+                        <th style="background-color: #660708;color: #ffffff;">
+                        <h4 style="color: rgb(255,255,255); font-size: 22px; width: 180px;">ARCHIVO&nbsp;&nbsp;<i class="fa fa-file-alt"></i></h4>
+                        </th>
                           </tr>
                           </thead>
-                          <tbody>                          
-                          <tr>
+                          <tbody>   
+                          <?php foreach ($IdAlumno as $key => $estudiante): ?> 
+                          <?php foreach ($IdDocumento as $key => $documentos): ?>
+                          
+                                            
+                          <tr class="fila">
+                      
+                            <td>                           
+                            <?php if($documentos->Matricula==$estudiante->MATRICULA){
+                                    echo(ucwords(strtolower($documentos->NombreDoc)));
+                                } 
+                                ?>
+
+                              </td> 
                               <td>
+                              <?php if($documentos->Matricula==$estudiante->MATRICULA){
+                                    echo(ucwords(strtolower($documentos->Fecha_Carga)));
+                                } 
+                                ?>
+                              </td>     
+                              <td>
+                              <?php if($documentos->Matricula==$estudiante->MATRICULA){
+                                    echo(ucwords(strtolower($documentos->Motivo)));
+                                } 
+                                ?>
                               </td>
                               <td>
-                              </td>
+                              <?php if($documentos->Matricula==$estudiante->MATRICULA){
+                                    echo(ucwords(strtolower($documentos->Estatus_Firmado)));
+                                } 
+                                ?>
+                              </td>  
                               <td>
-                              </td>
-                              <td>
-                              </td>
-                              <td>
-                              </td>
+                              <?php if($documentos->Matricula==$estudiante->MATRICULA){
+                                    echo(ucwords(strtolower($documentos->Ruta_archivo)));
+                                } 
+                                ?>
+                              </td> 
+                                   
                           </tr>
+                          <?php endforeach ?>
+                          <?php endforeach ?>
                           </tbody>
                       </table>
                   </div>
@@ -111,7 +146,6 @@
         </div> <!-- / .row -->
             <!-- ========== Footer ========== -->
             <?=$this->load->view('includes/footer', '', true) ?>
-
             <?=$this->load->view('includes/base_js', '', true) ?>
     </body>
 </html>

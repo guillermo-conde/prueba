@@ -6,8 +6,13 @@ class documentosafirmausuario extends CI_Controller {
 	/**
 	 * Autores: Equipo 3
 	 */
+	function __construct(){
+		parent::__construct();
+		$this->load->model("modfu");
+	}
 	public function index()
 	{
-		$this->load->view('Documentosafirmausuario');
+		$data['files'] = $this->modfu->obtenerdato();
+		$this->load->view('Documentosafirmausuario',$data);
 	}
 }

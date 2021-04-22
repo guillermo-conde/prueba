@@ -23,7 +23,7 @@
           
 
          <li class="nav-item">
-            <a href="<?= base_url('index.php/Dashboard')?>" class="nav-link">
+            <a href="<?= base_url('index.php/dashboard')?>" class="nav-link">
              
               
             <ion-icon name="apps-outline"></ion-icon>
@@ -48,7 +48,7 @@
           </li>
 
           <li class="nav-item">
-          <a href="<?= base_url('index.php/Documentosafirmausuario')?>" class="nav-link">
+          <a href="<?= base_url('index.php/documentosafirmausuario')?>" class="nav-link">
           <ion-icon name="folder-open-outline"></ion-icon>
 
               <p>

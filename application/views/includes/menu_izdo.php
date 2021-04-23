@@ -23,7 +23,7 @@
           
 
          <li class="nav-item">
-            <a href="http://proyecto-grupal.herokuapp.com/index.php/Dashboard" class="nav-link">
+            <a href="<?= base_url('index.php/dashboard')?>" class="nav-link">
             <ion-icon name="apps-outline"></ion-icon>
               <p>
                 Dashboard
@@ -33,7 +33,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="<?= base_url('index.php/Busqueda')?>" class="nav-link">
+            <a href="<?= base_url('index.php/ListaDocumentos')?>" class="nav-link">
               
             <ion-icon name="search-outline"></ion-icon>
 

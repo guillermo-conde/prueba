@@ -33,7 +33,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="<?= base_url('index.php/ListaDocumentos')?>" class="nav-link">
+            <a href="<?= base_url('index.php/busqueda')?>" class="nav-link">
               
             <ion-icon name="search-outline"></ion-icon>
 

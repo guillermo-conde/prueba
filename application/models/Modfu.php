@@ -6,7 +6,7 @@ defined ('BASEPATH') OR exit ('No direct script access allowed');
  *Aqui tendremos informacion hacer de los documentos a firma
  * @author Equipo
  * */
-class modfu extends CI_Model{
+class Modfu extends CI_Model{
     function __construct(){
 		parent::__construct();
         $this->load->database();

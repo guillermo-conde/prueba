@@ -111,7 +111,7 @@
                                               <tr class="folio">
                                                   <td><?= $files->id ?></td>
                                                   <td ><?= $files->title ?></td>
-                                                  <td><?= $files->descripcion ?></td>
+                                                  <td><?= $files->description ?></td>
                                                   <td><a href="<?=$files->url?>"><?=$files->url?></a></td>
                                               </tr>
                                              <?php }?> 

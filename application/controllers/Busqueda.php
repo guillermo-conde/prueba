@@ -19,7 +19,7 @@ class Busqueda extends CI_Controller {
 		$data['IdDocumento'] = $this->Mbusqueda->obtener_documentos();
         $data['IdAlumno'] = $this->Mbusqueda->obtener_alumno();
 		
-		$this->load->view('busqueda', $data);
+		$this->load->view('Busqueda', $data);
 	}
 	
 }

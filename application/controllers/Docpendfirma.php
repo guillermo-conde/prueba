@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class documentosafirmausuario extends CI_Controller {
+class Docpendfirma extends CI_Controller {
 
 	/**
 	 * Autores: Equipo 3
@@ -13,6 +13,6 @@ class documentosafirmausuario extends CI_Controller {
 	public function index()
 	{
 		$data['files'] = $this->modfu->obtenerdato();
-		$this->load->view('Documentosafirmausuario',$data);
+		$this->load->view('documentosaFirmaUsuario',$data);
 	}
 }

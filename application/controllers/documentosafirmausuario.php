@@ -12,7 +12,7 @@ class documentosafirmausuario extends CI_Controller {
 	}
 	public function index()
 	{
-		$data['files'] = $this->modfu->obtenerdato();
+		$data['files'] = $this->Modfu->obtenerdato();
 		$this->load->view('Documentosafirmausuario',$data);
 	}
 }

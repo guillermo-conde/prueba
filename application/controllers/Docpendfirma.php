@@ -8,7 +8,7 @@ class Docpendfirma extends CI_Controller {
 	 */
 	function __construct(){
 		parent::__construct();
-		$this->load->model("modfu");
+		$this->load->model("Modfu");
 	}
 	public function index()
 	{

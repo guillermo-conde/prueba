@@ -23,9 +23,7 @@
           
 
          <li class="nav-item">
-            <a href="<?= base_url('index.php/dashboard')?>" class="nav-link">
-             
-              
+            <a href="http://proyecto-grupal.herokuapp.com/index.php/dashboard" class="nav-link">
             <ion-icon name="apps-outline"></ion-icon>
               <p>
                 Dashboard

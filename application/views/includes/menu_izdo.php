@@ -23,7 +23,7 @@
           
 
          <li class="nav-item">
-            <a href="http://proyecto-grupal.herokuapp.com/index.php/dashboard" class="nav-link">
+            <a href="http://proyecto-grupal.herokuapp.com/index.php/Dashboard" class="nav-link">
             <ion-icon name="apps-outline"></ion-icon>
               <p>
                 Dashboard

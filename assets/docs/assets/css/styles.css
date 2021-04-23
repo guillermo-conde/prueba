@@ -1,0 +1,90 @@
+body {
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont,Raleway, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  }
+  
+  #promo {
+    text-align: center;
+    padding: 40px;
+    background: url(background.jpg) no-repeat;
+    background-size: cover;
+  }
+  
+  @media (max-width: 800px) {
+    #promo {
+      padding: 20px;
+    }
+  }
+  
+  #promo .jumbotron {
+    border-radius: 30px;
+    padding: 40px;
+    background-color: rgba(255,255,255,0.75);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  #wellcome p {
+    max-width: 1000px;
+    font-size: 25px;
+    margin: 0 auto;
+  }
+  
+  .site-section {
+    text-align: center;
+  }
+  
+  @media (max-width: 360px) {
+    #promo .jumbotron {
+      padding: 20px;
+    }
+  }
+  
+  .Button {
+    background: #D72727;
+    border-bottom: #000000;
+  }
+  
+  #logouni {
+    max-height: 30px;
+  }
+  
+  #logo2 {
+    max-height: 70px;
+  }
+  
+  #imagenlogg {
+    max-height: 70px;
+  }
+  
+  #promo2 {
+    text-align: center;
+    padding: 40px;
+    background: url(school.jpg) no-repeat;
+    background-size: cover;
+  }
+  
+  #promo2 .jumbotron {
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.75);
+    margin: auto;
+  }
+  
+  .container.indicaciones {
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  #intro {
+    max-width: 800px;
+    font-size: 20px;
+    margin: 0 auto;
+  }
+  
+  #jeje {
+    max-height: 70px;
+  }
+  
+  .contenedor {
+    background: rgba(25, 100, 120, 0.5);
+    text-align: center;
+  }

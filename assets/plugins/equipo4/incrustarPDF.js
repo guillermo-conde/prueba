@@ -1,5 +1,7 @@
 var urlPDF = documento_url; //Declaramos la ruta del pdf
 
+//Esta es una prueba de github
+
 pdfjsLib.GlobalWorkerOptions.workerSrc = base_url+'assets/pdf.worker.js'; //referenciamos un complemento de la librería.
 var loadingTask = pdfjsLib.getDocument(urlPDF); //instanciamos la promesa con la url del archivo.
 
